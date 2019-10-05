@@ -8,7 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, NowScoreDelegate {
+
 
     
     @IBOutlet weak var imageView: UIImageView!
@@ -30,13 +31,22 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
-    override func viewDidAppear(_ animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         correctCount = 0
         wrongCount = 0
         questionNumber = 0
         imageView.image = UIImage(named: imagesList.list[0].imageText)
+        
+        if UserDefaults.standard.object(forKey: "deforeCount") != nil {
+            
+            maxScore = UserDefaults.standard.object(forKey: "beforeCount") as! Int
+            
+        } else {
+        }
+        
+        maxScoreLabel.text = String(maxScore)
         
     }
     
@@ -105,6 +115,12 @@ class ViewController: UIViewController {
         
     }
     
+    
+    func nowScore(score: Int) {
+        maxScoreLabel.text = String(score)
+    }
+    
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "next" {
@@ -113,6 +129,8 @@ class ViewController: UIViewController {
             
             nextVC.correctedCount = correctCount
             nextVC.wrongCount = wrongCount
+            // NextViewControllerのdelegateをここで実行するよって意味
+            nextVC.delegate = self
         }
     }
     
