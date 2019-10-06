@@ -28,7 +28,10 @@ class ViewController: UIViewController, NowScoreDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
+        let human = Human()
+        human.breath()
+        
     }
 
     override func viewWillAppear(_ animated: Bool) {
@@ -65,10 +68,6 @@ class ViewController: UIViewController, NowScoreDelegate {
         } else if (sender as AnyObject).tag == 2 {
             
             pickedAnswer = false
-            
-            // Xボタンが押された時
-            
-            // ユーザーが押したボタンがXボタンだった
             
             // Xボタンの音声を流す
             
