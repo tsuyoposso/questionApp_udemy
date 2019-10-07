@@ -35,7 +35,7 @@ class NextViewController: UIViewController {
         correctLabel.text = String(correctedCount)
         wrongLabel.text = String(wrongCount)
         
-        if UserDefaults.standard.object(forKey: "deforeCount") != nil {
+        if UserDefaults.standard.object(forKey: "beforeCount") != nil {
             
             beforeCount = UserDefaults.standard.object(forKey: "beforeCount") as! Int
         }
@@ -48,10 +48,10 @@ class NextViewController: UIViewController {
         // もし最高得点であれば、入れ替え
         if beforeCount < correctedCount {
             
-            UserDefaults.standard.set(correctedCount, forKey:   "beforeCount")
+            UserDefaults.standard.set(correctedCount, forKey: "beforeCount")
             delegate?.nowScore(score: correctedCount)
             
-        } else if beforeCount > correctedCount {
+        } else if beforeCount >= correctedCount {
             
             UserDefaults.standard.set(beforeCount, forKey: "beforeCount")
             

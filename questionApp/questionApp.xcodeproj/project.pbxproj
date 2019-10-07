@@ -12,6 +12,8 @@
 		FEC4C31023488E0500BF4DAA /* SoundFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4C30F23488E0500BF4DAA /* SoundFile.swift */; };
 		FEC4C312234A17D700BF4DAA /* Animal.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4C311234A17D700BF4DAA /* Animal.swift */; };
 		FEC4C314234A182B00BF4DAA /* Human.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4C313234A182B00BF4DAA /* Human.swift */; };
+		FEC4C336234AC98700BF4DAA /* WithoutMP3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4C335234AC98700BF4DAA /* WithoutMP3.swift */; };
+		FEC4C338234AD09300BF4DAA /* ChangeColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEC4C337234AD09300BF4DAA /* ChangeColor.swift */; };
 		FEEA4F3D234845290061DFD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEA4F3C234845290061DFD5 /* AppDelegate.swift */; };
 		FEEA4F3F234845290061DFD5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEA4F3E234845290061DFD5 /* SceneDelegate.swift */; };
 		FEEA4F41234845290061DFD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FEEA4F40234845290061DFD5 /* ViewController.swift */; };
@@ -30,6 +32,8 @@
 		FEC4C30F23488E0500BF4DAA /* SoundFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundFile.swift; sourceTree = "<group>"; };
 		FEC4C311234A17D700BF4DAA /* Animal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Animal.swift; sourceTree = "<group>"; };
 		FEC4C313234A182B00BF4DAA /* Human.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Human.swift; sourceTree = "<group>"; };
+		FEC4C335234AC98700BF4DAA /* WithoutMP3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WithoutMP3.swift; sourceTree = "<group>"; };
+		FEC4C337234AD09300BF4DAA /* ChangeColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeColor.swift; sourceTree = "<group>"; };
 		FEEA4F39234845290061DFD5 /* questionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = questionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEEA4F3C234845290061DFD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FEEA4F3E234845290061DFD5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,8 @@
 				FEC4C30F23488E0500BF4DAA /* SoundFile.swift */,
 				FEC4C311234A17D700BF4DAA /* Animal.swift */,
 				FEC4C313234A182B00BF4DAA /* Human.swift */,
+				FEC4C335234AC98700BF4DAA /* WithoutMP3.swift */,
+				FEC4C337234AD09300BF4DAA /* ChangeColor.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -193,10 +199,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FEEA4F41234845290061DFD5 /* ViewController.swift in Sources */,
+				FEC4C338234AD09300BF4DAA /* ChangeColor.swift in Sources */,
 				FEC4C312234A17D700BF4DAA /* Animal.swift in Sources */,
 				FEC4C31023488E0500BF4DAA /* SoundFile.swift in Sources */,
 				FEEA4F5A234848D40061DFD5 /* NextViewController.swift in Sources */,
 				FEC4C314234A182B00BF4DAA /* Human.swift in Sources */,
+				FEC4C336234AC98700BF4DAA /* WithoutMP3.swift in Sources */,
 				FEEA4F3D234845290061DFD5 /* AppDelegate.swift in Sources */,
 				FEEA4F3F234845290061DFD5 /* SceneDelegate.swift in Sources */,
 				FEC4C30C234854A400BF4DAA /* ImagesModel.swift in Sources */,

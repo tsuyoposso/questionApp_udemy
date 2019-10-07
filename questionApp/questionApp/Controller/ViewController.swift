@@ -26,11 +26,23 @@ class ViewController: UIViewController, NowScoreDelegate {
     // IBActionnで検知した回答がどちらなのか取得する変数
     var pickedAnswer = false
     
+    var soundFile = SoundFile()
+    
+    var changeColor = ChangeColor()
+    
+    var gradientLayer = CAGradientLayer()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let human = Human()
-        human.breath()
+        gradientLayer = changeColor.changeColor(topR: 0.07, topG: 0.13, topB: 0.26, topAlpha: 1.0, bottomR: 0.54, bottomG: 0.74, bottomB: 0.74, bottomAlpha: 1.0)
+        // gradientLayerのサイズを決める -> view.boundsは画面いっぱいという意味
+        gradientLayer.frame = view.bounds
+        
+        // グラデーションしたサブレイヤーをviewに反映させる
+        view.layer.insertSublayer(gradientLayer, at: 0)
+        
+        imageView.layer.cornerRadius = 20.0
         
     }
 
@@ -42,7 +54,7 @@ class ViewController: UIViewController, NowScoreDelegate {
         questionNumber = 0
         imageView.image = UIImage(named: imagesList.list[0].imageText)
         
-        if UserDefaults.standard.object(forKey: "deforeCount") != nil {
+        if UserDefaults.standard.object(forKey: "beforeCount") != nil {
             
             maxScore = UserDefaults.standard.object(forKey: "beforeCount") as! Int
             
@@ -58,18 +70,17 @@ class ViewController: UIViewController, NowScoreDelegate {
         
         if (sender as AnyObject).tag == 1 {
             
+            soundFile.playSound(fileName: "maruSound", extensionName: "mp3")
+            
             pickedAnswer = true
             
-            // 丸ボタンが押された時
-            
-            // ユーザーが押したボタンが丸ボタンだった
-            
-            // 丸ボタンの音声を流す
+
         } else if (sender as AnyObject).tag == 2 {
-            
+
+            soundFile.playSound(fileName: "batsuSound", extensionName: "mp3")
+
             pickedAnswer = false
             
-            // Xボタンの音声を流す
             
         }
         
@@ -116,6 +127,7 @@ class ViewController: UIViewController, NowScoreDelegate {
     
     
     func nowScore(score: Int) {
+        soundFile.playSound(fileName: "sound", extensionName: "mp3")
         maxScoreLabel.text = String(score)
     }
     

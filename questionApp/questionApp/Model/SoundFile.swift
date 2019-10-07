@@ -21,7 +21,6 @@ class SoundFile {
         
         // doの中身を実行して、もしエラーが起きればcatchの中身を実行する
         do {
-            
             // 効果音を鳴らす
             player = try AVAudioPlayer(contentsOf: soundURL!)
             player?.play()
